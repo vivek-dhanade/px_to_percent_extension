@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        @layer reset, base;
+
+        @layer reset {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                line-height: 1rem;
+            }
+        }
+
+        @layer base {
+            :root {
+                width: fit-content;
+            }
+
+            body {
+                margin-inline: 0.5rem;
+
+                main {
+                    h6 {
+                        all: unset;
+                        font-size: inherit;
+                    }
+
+                    section {
+                        margin-block-end: 0.5rem;
+                        padding-block-end: 0.5rem;
+                        border-block-end: 1px solid green;
+
+                        p {
+                            margin: 0.5rem 0 0 0.5rem;
+
+                            input {
+                                width: 5rem;
+                            }
+                        }
+
+                        em {
+                            margin: 0 0 0 0.5rem;
+                            font-size: 75%;
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h6>Selected Element:</h6>
+        <section class="px-field">
+            <p>
+                <button type="button">Copy</button>
+                <input type="number" id="input-px-height" name="input-px-height" placeholder="px height">
+                <label for="input-px-height">px</label>
+            </p>
+            <p>
+                <button type="button">Copy</button>
+                <input type="number" id="input-px-width" name="input-px-width" placeholder="px width">
+                <label for="input-px-width">px</label>
+            </p>
+        </section>
+        <section class="percent-field">
+            <p>
+                <button type="button">Copy</button>
+                <input type="number" id="output-percent-height" name="output-percent-height" placeholder="% height">
+                <label for="output-percent-height">%</label>
+            </p>
+            <p>
+                <button type="button">Copy</button>
+                <input type="number" id="output-percent-width" name="output-percent-width" placeholder="% width">
+                <label for="output-percent-width">%</label>
+            </p>
+            <em> (of parent element)</em>
+            <!-- <p>
+                <input type="number" id="output-percent-vw" name="output-percent" placeholder="% of vw">
+                <label for="output-percent-vw">%</label>
+                <button type="button">Copy</button>
+            </p> -->
+        </section>
+    </main>
+</body>
+<script src="index.js"></script>
+
+</html>
+<!-- 
+{
+    "name":"px to % extension",
+    "version":"1.0.0",
+    "description":"px to % convertor",
+    "manifest_version":3,
+    "author":"hashroad",
+    "permissions":[
+        "activeTab"
+    ],
+    "action":{
+        "default_popup":"index.html",
+        "default_title":"px to %"
+    },
+
+    "background":{
+        "service_worker":"index.js"
+    }
+}
+-->
