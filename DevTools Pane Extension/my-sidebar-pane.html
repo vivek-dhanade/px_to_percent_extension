@@ -1,71 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <body>
-        <main>
-            <h6>Selected Element:</h6>
-            <button type="button" id="getDimensions" >Get Dimensions</button>
-            <section class="px-field">
-                <p>
-                    <button type="button" id="copy-1">Copy</button>
-                    <input type="number" id="input-px-height" name="input-px-height" placeholder="px height">
-                    <label for="input-px-height">px</label>
-                </p>
-                <p>
-                    <button type="button" id="copy-2">Copy</button>
-                    <input type="number" id="input-px-width" name="input-px-width" placeholder="px width">
-                    <label for="input-px-width">px</label>
-                </p>
-            </section>
-            <section class="percent-field">
-                <p>
-                    <button type="button" id="copy-3">Copy</button>
-                    <input type="number" id="output-percent-height" name="output-percent-height" placeholder="% height">
-                    <label for="output-percent-height">%</label>
-                </p>
-                <p>
-                    <button type="button" id="copy-4">Copy</button>
-                    <input type="number" id="output-percent-width" name="output-percent-width" placeholder="% width">
-                    <label for="output-percent-width">%</label>
-                </p>
+    <main>
+        <h6>Selected Element:</h6>
+        <section class="px-field">
+            <p>
+                height:<span id="pxHeight" contenteditable="true"></span>px;
+                <br>
+                width:<span id="pxWidth"contenteditable="true"></span>px;
+                <br>
+                <button type="button" id="copyPx">Copy</button>
+            </p>
+        </section>
+        <section class="percent-field">
+            <p>
+                height:<span id="percentHeight"></span>%;
+                <br>
+                width:<span id="percentWidth"></span>%;
+                <br>
                 <em> (of parent element)</em>
-                <!-- <p>
-                    <input type="number" id="output-percent-vw" name="output-percent" placeholder="% of vw">
-                    <label for="output-percent-vw">%</label>
-                    <button type="button">Copy</button>
-                </p> -->
-            </section>
-        </main>
-    </body>
-    <script src="my-sidebar-pane.js"></script>
+                <br>
+                <button type="button" id="copyPercent">Copy</button>
+            </p>
+        </section>
+        <section class="viewportDimensions">
+            <p>
+                height:<span id="vHeight"></span>vh;
+                <br>
+                width:<span id="vWidth"></span>vw;
+                <br>
+                <button type="button" id="copyViweport">Copy</button>
+            </p>
+        </section>
+        <section class="remDimensions">
+            <p>
+                height:<span id="remHeight"></span>rem;
+                <br>
+                width:<span id="remWidth"></span>rem;
+                <br>
+                <button type="button" id="copyRem">Copy</button>
+            </p>
+        </section>
+        <section class="emDimensions">
+            <p>
+                height:<span id="emHeight"></span>em;
+                <br>
+                width:<span id="emWidth"></span>em;
+                <br>
+                <button type="button" id="copyEm">Copy</button>
+            </p>
+        </section>
+    </main>
+<script src="my-sidebar-pane.js"></script>
 </body>
+
 </html>
-
-
-
-<!-- 
-{
-    "name":"px to % extension",
-    "version":"1.0.0",
-    "description":"px to % convertor",
-    "manifest_version":3,
-    "author":"hashroad",
-    "permissions":[
-        "activeTab"
-    ],
-    "action":{
-        "default_popup":"index.html",
-        "default_title":"px to %"
-    },
-
-    "background":{
-        "service_worker":"index.js"
-    }
-}
--->
