@@ -1,0 +1,6 @@
+{
+    "manifest_version":3,
+    "name":"retry",
+    "version":"1.0.0",
+    "devtools_page":"devtools.html"
+}

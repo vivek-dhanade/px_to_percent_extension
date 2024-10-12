@@ -4,11 +4,10 @@
   "version": "1.0.0",
   "description": "px to percent converter",
   "author": "hashroad",
-  "permissions": [
-      "activeTab"
-  ],
+  "permissions": ["activeTab", "devtools"],
   "action": {
-      "default_popup": "index.html",
-      "default_title": "px to percent"
-  }
+    "default_popup": "index.html",
+    "default_title": "px to percent"
+  },
+  "devtools_page": "devtools.html"
 }

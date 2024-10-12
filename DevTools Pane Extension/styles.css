@@ -1,0 +1,47 @@
+@layer reset, base;
+
+@layer reset {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1rem;
+    }
+}
+
+@layer base {
+    :root {
+        width: fit-content;
+    }
+
+    body {
+        margin-inline: 0.5rem;
+
+        main {
+            h6 {
+                all: unset;
+                font-size: inherit;
+            }
+
+            section {
+                margin-block-end: 0.5rem;
+                padding-block-end: 0.5rem;
+                border-block-end: 1px solid green;
+
+                p {
+                    margin: 0.5rem 0 0 0.5rem;
+
+                    input {
+                        width: 5rem;
+                    }
+                }
+
+                em {
+                    margin: 0 0 0 0.5rem;
+                    font-size: 75%;
+                }
+            }
+        }
+    }
+}
+
